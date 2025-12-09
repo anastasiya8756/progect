@@ -35,6 +35,7 @@ body {
     justify-content: center;
     list-style: none;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .filter-nav a {
@@ -43,6 +44,10 @@ body {
     font-weight: bold;
     font-size: 0.9rem;
     padding: 5px 10px;
+}
+
+.filter-nav a.active {
+    border-bottom: 3px solid #e65a6c;
 }
 
 .portfolio {
@@ -159,4 +164,46 @@ body {
 .team-content p {
     font-size: 0.9rem;
     line-height: 1.5;
+}
+
+@media screen and (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero {
+        padding: 60px 0 40px 0;
+    }
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    .stats {
+        padding: 40px 0;
+    }
+    .stat-item {
+        padding: 15px 0;
+    }
 }
