@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Perfect Layout</title>
     <link rel="stylesheet" href="styles.css">
-    </head>
+</head>
 <body>
 
+    <div id="preloader">
+        <div class="loader-dots-container">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div> 
+        <div class="loader-text">LOADING AWESOME DESIGN...</div>
+    </div>
+    
     <header class="hero">
         <div class="container">
             <h1>The Design That Likes To Say Yes.</h1>
@@ -136,5 +145,16 @@
         </section>
     </main>
 
+    <script>
+        window.onload = function() {
+            var preloader = document.getElementById('preloader');
+            document.body.classList.add('loaded');
+            setTimeout(function() {
+                if(preloader) {
+                    preloader.style.display = 'none';
+                }
+            }, 188495);
+        };
+    </script>
 </body>
 </html>
