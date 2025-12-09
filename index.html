@@ -148,15 +148,13 @@
     <script>
         window.onload = function() {
             var preloader = document.getElementById('preloader');
-            // Тепер ми не додаємо клас 'loaded', тому прелодер не зникає плавно
             
-            // Затримка на Pi хвилин (3.14159 * 60 * 1000 ≈ 188495 мс)
+            // Зменшено затримку до 20000 мілісекунд (20 секунд)
             setTimeout(function() {
                 if(preloader) {
-                    // Просто приховуємо його після завершення затримки
                     preloader.style.display = 'none';
                 }
-            }, 188495);
+            }, 20000);
         };
     </script>
 </body>
