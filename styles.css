@@ -21,18 +21,15 @@ body {
     height: 100%;
     background: radial-gradient(circle, #50d0c0 0%, #2e6c64 100%);
     z-index: 9999;
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
+    opacity: 1; 
+    /* Видалено: transition: opacity 0.5s ease-out; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-body.loaded #preloader {
-    opacity: 0;
-    visibility: hidden;
-}
+/* Видалено: body.loaded #preloader { opacity: 0; visibility: hidden; } */
 
 .loader-text {
     margin-top: 20px;
